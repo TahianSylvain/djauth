@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account access</title>
+</head>
+<body>
+    <a href="{% url 'account:signup' %}">Don't have an account</a>
+    <form action="" method="post">
+        {% csrf_token %}
+        {# {  } #}
+        <input type="text" name="username" id="nom" placeholder="your name..">
+        <input type="password" name="password" id="pwd">
+        <input type="submit" value="Log In">
+    </form>
+    <a href="{% url 'account:update_pwd' %}">Forget password?</a>
+</body>
+</html>

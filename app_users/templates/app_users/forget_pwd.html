@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset password</title>
+</head>
+<body>
+    <form action="{% url 'account:update_pwd' %}" method="post">
+        {% csrf_token %}
+        Enter your email address to get a new password!
+        {{ form.email }}
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
